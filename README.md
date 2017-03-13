@@ -1,3 +1,56 @@
+## Team info:
+[Goal 181 Respository Link](http://jsdev.learnersguild.org/goals/181-Timeoff_Snapshot-Approver_Epic.html)
+```
+Teamname: #drunk-civet
+Authors: @lumodon, @HJBowers
+```
+
+# Quality Rubric
+
+Code Construction: [40 points]
+- Concise commenting
+- Intermediate variables
+- No long functions
+- Well-factored self-documenting code
+- Eslint is setup
+Code Readability: [40 points]
+- Good names for files, variables classes, methods etc.
+- Consistent white space usage
+- Comments explaining unusual code, bug fixes, code assumptions functions
+- Clean, precise commit messages
+Code Organization: [20 points]
+- Methods are grouped logically or by accessibility. Basic separation of code into logical folders
+- Code is grouped into regions and well commented with references to other source files. Each physical file has a unique purpose
+
+# Specs for Review:
+
+## Getting started
+
+### Familiarize yourself with the codebase
+
+1. First step of approaching a new codebase is to read the [README](README.md).
+1. Next, get the code up and running. Checkout the [README](README.md) and look for instructions to get a local development copy of the repo up and running and play around with it.
+1. Next, read the browse in the `t` directory. Reading test descriptions (and file names) is a great way to learn what the app can do.
+1. Next, run all the tests locally, to make sure they are passing. (for this repo, there will be several failing tests) You'll need phantomjs installed: `npm install phantomjs` then run `npm test`
+1. Next, checkout the [database design](docs/db_design.txt). Load it up in [sql designer](http://sql.apps.learnersguild.org/) and familiarize yourself with the schema.
+1. Finally, look around the other folders and get a sense of how the code is organized, and what the technology stack is: database? front end? test suite? asset management? css framework?
+
+
+## Epics
+
+## Epic 1: New role: Approvers
+
+This epics adds a new role: approver. Approvers can approve and reject requests, but don't have all of the admin access that an admin has.
+
+[ ] As an Admin when I add a new user, I can choose to make them an approver<br>
+[ ] As an Admin if I try to make someone an approver AND an admin I get an error: "User can only be approver or admin, not both"<br>
+[ ] As an approver I can see a menu item in the top navbar next to calendar called "Requests" which links to "/requests"<br>
+[ ] As an admin I can see the requests link as well<br>
+[ ] As an employee I cannot see the requests link<br>
+[ ] As an approver or admin, I can see a notification icon next to the request link that shows the number of pending requests<br>
+[ ] As an approver, I can approve and reject requests<br>
+[ ] As an approver, I do not have access to other admin functions (general, department, LDAP configuration, emails audit)<br>
+
 
 # TimeOff.Management
 
