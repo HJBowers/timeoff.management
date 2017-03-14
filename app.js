@@ -59,7 +59,6 @@ app.use(passport.session());
 app.use(function(req,res,next){
     res.locals.session     = req.session;
     res.locals.logged_user = req.user;
-    res.locals.can_use_requests = req.user.admin || req.user.approver
     res.locals.url_to_the_site_root = '/';
     res.locals.requested_path = req.originalUrl;
     // For book leave request modal

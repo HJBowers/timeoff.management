@@ -22,9 +22,9 @@
           {{# if logged_user.admin }}
             <li class="hidden-xs"><a href="/users/">Employees</a></li>
           {{/if}}
-          {{# if can_use_requests }}
+          {{# if_or logged_user.admin logged_user.approver }}
             <li class="hidden-xs"><a href="/requests/">Requests</a></li>
-          {{/if}}
+          {{/if_or}}
 
           <li class="navbar-form navbar-left">
             <div class="form-group">
