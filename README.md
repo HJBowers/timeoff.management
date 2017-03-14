@@ -42,14 +42,14 @@ Code Organization: [20 points]
 
 This epics adds a new role: approver. Approvers can approve and reject requests, but don't have all of the admin access that an admin has.
 
-- [ ] As an Admin when I add a new user, I can choose to make them an approver<br>
-- [ ] As an Admin if I try to make someone an approver AND an admin I get an error: "User can only be approver or admin, not both"<br>
-- [ ] As an approver I can see a menu item in the top navbar next to calendar called "Requests" which links to "/requests"<br>
-- [ ] As an admin I can see the requests link as well<br>
-- [ ] As an employee I cannot see the requests link<br>
+- [X] As an Admin when I add a new user, I can choose to make them an approver<br>
+- [X] As an Admin if I try to make someone an approver AND an admin I get an error: "User can only be approver or admin, not both"<br>
+- [X] As an approver I can see a menu item in the top navbar next to calendar called "Requests" which links to "/requests"<br>
+- [X] As an admin I can see the requests link as well<br>
+- [X] As an employee I cannot see the requests link<br>
 - [ ] As an approver or admin, I can see a notification icon next to the request link that shows the number of pending requests<br>
 - [ ] As an approver, I can approve and reject requests<br>
-- [ ] As an approver, I do not have access to other admin functions (general, department, LDAP configuration, emails audit)<br>
+- [X] As an approver, I do not have access to other admin functions (general, department, LDAP configuration, emails audit)<br>
 
 
 # TimeOff.Management
