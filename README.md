@@ -48,7 +48,7 @@ This epics adds a new role: approver. Approvers can approve and reject requests,
 - [X] As an admin I can see the requests link as well<br>
 - [X] As an employee I cannot see the requests link<br>
 - [ ] As an approver or admin, I can see a notification icon next to the request link that shows the number of pending requests<br>
-- [ ] As an approver, I can approve and reject requests<br>
+- [X] As an approver, I can approve and reject requests<br>
 - [X] As an approver, I do not have access to other admin functions (general, department, LDAP configuration, emails audit)<br>
 
 
