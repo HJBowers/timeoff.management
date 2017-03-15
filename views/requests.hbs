@@ -35,9 +35,10 @@
         <tr vpp="pending_for__{{this.user.email}}">
           <td>{{this.full_name}}</td>
           <td>{{this.user.department.name}}</td>
-          <td>{{this.created_at}}</td>
+          <td>{{as_date this.created_at}}</td>
           <td>From {{this.start_date}} to {{this.leave_date}}</td>
           <td>{{#if this.leaveObject.is_pended_revoke_leave}}REVOKE {{/if}}{{this.leaveObject.leave_type.name}}</td>
+          <td>{{this.days}}</td>
           <td>
             <form action="/requests/reject/" method="POST">
             <input class="btn btn-warning" type="submit" value="Reject">
