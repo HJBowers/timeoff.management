@@ -34,14 +34,10 @@
         {{#each to_be_approved_leaves }}
         <tr vpp="pending_for__{{this.user.email}}">
           <td>{{this.full_name}}</td>
-          <!-- <td>{{#with this.user}}{{this.full_name}}{{/with}}</td> -->
           <td>{{this.user.department.name}}</td>
-          <!-- <td>{{as_date this.createdAt}}</td> -->
           <td>{{this.created_at}}</td>
-          <!-- <td>From {{#with this.get_start_leave_day}}{{as_date this.date}}{{/with}} to {{#with this.get_end_leave_day}}{{as_date this.date}}{{/with}}</td> -->
           <td>From {{this.start_date}} to {{this.leave_date}}</td>
-          <!-- <td>{{#if this.is_pended_revoke_leave}}REVOKE {{/if}}{{this.leave_type.name}}</td> -->
-          <!-- <td>{{ this.get_deducted_days_number }}</td> -->
+          <td>{{#if this.leaveObject.is_pended_revoke_leave}}REVOKE {{/if}}{{this.leaveObject.leave_type.name}}</td>
           <td>
             <form action="/requests/reject/" method="POST">
             <input class="btn btn-warning" type="submit" value="Reject">
