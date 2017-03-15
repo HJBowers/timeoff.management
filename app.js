@@ -57,6 +57,11 @@ app.use(passport.session());
 //
 // Make sure session and user objects are available in templates
 app.use(function(req,res,next){
+    req.user.get_count_of_leaves()
+      .then( leaf => {
+        console.log("NOW we're done")
+        res.locals.requestCount = leaf.length
+      })
     res.locals.session     = req.session;
     res.locals.logged_user = req.user;
     res.locals.url_to_the_site_root = '/';
