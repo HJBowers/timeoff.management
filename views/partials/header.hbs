@@ -24,7 +24,6 @@
           {{/if}}
           {{# if_or logged_user.admin logged_user.approver }}
             <li class="hidden-xs"><a href="/requests/">Requests</a></li>
-            <li class="hidden-xs"><span class="request-icon">{{requestsCount}}{{_requestCount}}</span></li>
           {{/if_or}}
 
           <li class="navbar-form navbar-left">
@@ -68,5 +67,3 @@
 </nav>
 
 </div>
-
-
