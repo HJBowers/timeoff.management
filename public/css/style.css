@@ -157,3 +157,23 @@ div.feeds-holder {
 @media (max-width: 768px) {
   body.modal-open {
     position: fixed; } }
+
+.request-icon {
+  border-radius: 8px;
+  border: solid red 1px;
+  background-color: red;
+  height: 16px;
+  width: 16px;
+  overflow: visible;
+  position: absolute;
+  left: -15px;
+  top: 7px;
+}
+
+.request-icon-text {
+  color: white;
+  font-size: 0.8em;
+  position: relative;
+  left: 4px;
+  top: -4px;
+}
