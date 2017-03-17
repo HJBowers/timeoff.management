@@ -2,6 +2,11 @@
   "name": "jswebapp",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HJBowers/timeoff.management"
+  },
   "dependencies": {
     "bluebird": "^2.10.2",
     "body-parser": "^1.8.4",
@@ -38,7 +43,7 @@
   },
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha --recursive t/*",
-    "start": "node bin/wwww",
+    "start": "nodemon bin/wwww",
     "db-update" : "node node_modules/.bin/sequelize db:migrate --config=config/db.json --models-path=lib/model/db/"
   }
 }
