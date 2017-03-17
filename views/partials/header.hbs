@@ -19,9 +19,14 @@
         {{# if logged_user }}
           <li><a href="/calendar/">Calendar</a></li>
           <li class="hidden-xs"><a href="/calendar/teamview/">Team View</a></li>
-          {{# if logged_user.admin }}
+          {{# if_func logged_user.is_admin logged_user }}
             <li class="hidden-xs"><a href="/users/">Employees</a></li>
-          {{/if}}
+          {{/if_func}}
+          {{# if_or logged_user.admin logged_user.approver }}
+            <li class="hidden-xs"><a href="/requests/">Requests</a></li>
+            <li class="hidden-xs"><span class="request-icon"><span class="request-icon-text">{{requestCount}}</span></span></li>
+          {{/if_or}}
+
           <li class="navbar-form navbar-left">
             <div class="form-group">
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#book_leave_modal" id="book_time_off_btn">New absence</button>
@@ -32,7 +37,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           {{# if logged_user }}
-            {{# if logged_user.admin }}
+            {{# if_func logged_user.is_admin logged_user}}
             <li class="dropdown hidden-xs">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-gears"></span> <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -42,7 +47,7 @@
                 <li><a href="/audit/email/">Emails audit</a></li>
               </ul>
             </li>
-            {{/if}}
+            {{/if_func}}
             <li class="visible-xs-block"><a href="/requests/">My requests</a></li>
             <li class="visible-xs-block"><a href="/logout/">Logout</a></li>
             <li class="dropdown hidden-xs">
@@ -63,5 +68,3 @@
 </nav>
 
 </div>
-
-

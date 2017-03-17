@@ -42,15 +42,24 @@ Code Organization: [20 points]
 
 This epics adds a new role: approver. Approvers can approve and reject requests, but don't have all of the admin access that an admin has.
 
-[ ] As an Admin when I add a new user, I can choose to make them an approver<br>
-[ ] As an Admin if I try to make someone an approver AND an admin I get an error: "User can only be approver or admin, not both"<br>
-[ ] As an approver I can see a menu item in the top navbar next to calendar called "Requests" which links to "/requests"<br>
-[ ] As an admin I can see the requests link as well<br>
-[ ] As an employee I cannot see the requests link<br>
-[ ] As an approver or admin, I can see a notification icon next to the request link that shows the number of pending requests<br>
-[ ] As an approver, I can approve and reject requests<br>
-[ ] As an approver, I do not have access to other admin functions (general, department, LDAP configuration, emails audit)<br>
+- [X] As an Admin when I add a new user, I can choose to make them an approver<br>
+- [X] As an Admin if I try to make someone an approver AND an admin I get an error: "User can only be approver or admin, not both"<br>
+- [X] As an approver I can see a menu item in the top navbar next to calendar called "Requests" which links to "/requests"<br>
+- [X] As an admin I can see the requests link as well<br>
+- [X] As an employee I cannot see the requests link<br>
+- [X] As an approver or admin, I can see a notification icon next to the request link that shows the number of pending requests<br>
+- [X] As an approver, I can approve and reject requests<br>
+- [X] As an approver, I do not have access to other admin functions (general, department, LDAP configuration, emails audit)<br>
 
+## STRETCH: Epic 2: New role: Backend User
+
+This epic adds a new role: backend user. Backend users can access general admin functions, but can't approve/reject requests.
+
+- [X] As an Admin when I add a new user, I can choose to make them 'backend user'
+- [X] As an Admin if I try to make someone a 'backend user' AND an admin I get an error: "User can only be approver or admin, not both"
+- [X] As a Backend user, I can't see the 'Requests' menu item
+- [X] As a Backend user, I have access to other admin functions (general, department, LDAP configuration, emails audit)
+- [X] As a Backend user, when I browse '/request' I see only my personal requests, not the admin/approver view
 
 # TimeOff.Management
 
